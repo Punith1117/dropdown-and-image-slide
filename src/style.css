@@ -1,0 +1,49 @@
+button {
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.dropdown-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(114, 103, 206);
+}
+
+.dropdown {
+    position: relative;
+    margin: 3rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown-name {
+    background-color: turquoise;
+    color: black;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.dropdown-content {
+    display: none;
+}
+
+.displaying {
+    position: absolute;
+    top: 100%;
+    left: 10px;
+    display: flex;
+    flex-direction: column;
+
+    .option {
+        background-color: rgb(64, 224, 136);
+        color: black;
+        border: 1px solid grey;
+        border-radius: 1rem;
+
+        &:hover {
+            filter: brightness(0.7);
+        }
+    }
+}
