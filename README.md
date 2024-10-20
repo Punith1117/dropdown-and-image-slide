@@ -1,4 +1,9 @@
 # web-dev-template
 
 credits:  
--> reset.css from [joshwcomeau](https://www.joshwcomeau.com/css/custom-css-reset/)
+-> reset.css from [joshwcomeau](https://www.joshwcomeau.com/css/custom-css-reset/)  
+-> Image by <a href="https://pixabay.com/users/stelchik7-13466788/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8313142">Stela Rimova</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8313142">Pixabay</a>  
+-> Image by <a href="https://pixabay.com/users/ivabalk-782511/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8673535">ivabalk</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8673535">Pixabay</a>  
+-> Image by <a href="https://pixabay.com/users/_stephen_chege_-43664203/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9073925">Stephen Chege</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9073925">Pixabay</a>  
+-> Image by <a href="https://pixabay.com/users/gidlark01-45195753/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8940207">Oleksandr K</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8940207">Pixabay</a>  
+-> Image by <a href="https://pixabay.com/users/jensenartofficial-31380959/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=7628308">Jensen Art Co</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=7628308">Pixabay</a>
