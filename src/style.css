@@ -16,6 +16,24 @@ button {
   margin: 3rem;
   display: flex;
   flex-direction: column;
+  .displaying {
+    position: absolute;
+    top: 100%;
+    left: 10px;
+    display: flex;
+    flex-direction: column;
+  
+    .option {
+      background-color: rgb(64, 224, 136);
+      color: black;
+      border: 1px solid grey;
+      border-radius: 1rem;
+  
+      &:hover {
+        filter: brightness(0.7);
+      }
+    }
+  }
 }
 
 .dropdown-name {
@@ -29,21 +47,99 @@ button {
   display: none;
 }
 
-.displaying {
-  position: absolute;
-  top: 100%;
-  left: 10px;
+.slide-section {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-  .option {
-    background-color: rgb(64, 224, 136);
+.image-slide {
+  margin-top: 5rem;
+  height: 30rem;
+  width: 50rem;
+  position: relative;
+}
+
+.image {
+  display: none;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.image > img {
+  border: 5px solid rgba(0, 0, 0, 0.596);
+  border-radius: 3rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.previous-slide, .next-slide {
+  position: absolute;
+  height: 5rem;
+  width: 3rem;
+  font-size: 2rem;
+  color: white;
+  background-color: transparent;
+  transition: background-color 1s ease, color 1s ease;
+  border: 0;
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.705);
     color: black;
-    border: 1px solid grey;
-    border-radius: 1rem;
-
-    &:hover {
-      filter: brightness(0.7);
-    }
   }
 }
+
+.previous-slide {
+  border-radius: 0px 1rem 1rem 0px;
+  top: 40%;
+  left: 0;
+}
+
+.next-slide {
+  border-radius: 1rem 0px 0px 1rem;
+  top: 40%;
+  right: 0;
+}
+
+.displaying-slide {
+  display: block;
+  animation: opacityChange 1s ease-out;
+}
+
+@keyframes opacityChange {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.slide-navigators {
+  display: flex;
+  position: absolute;
+  top: 85%;
+  left: 42%;
+  gap: 1rem;
+}
+
+.slide-navigator {
+  height: 1rem;
+  width: 1rem;
+  border: 0;
+  border-radius: 1rem;
+  background-color: rgba(255, 255, 255, 0.822);
+  &:hover {
+    background-color: rgb(187, 107, 82);
+  }
+}
+
+.slide-navigators > .displaying {
+  scale: 1.5;
+  transition: all 0.5s ease;
+  background-color: rgb(82, 187, 129);
+}
+
