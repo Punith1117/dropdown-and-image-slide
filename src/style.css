@@ -22,13 +22,13 @@ button {
     left: 10px;
     display: flex;
     flex-direction: column;
-  
+
     .option {
       background-color: rgb(64, 224, 136);
       color: black;
       border: 1px solid grey;
       border-radius: 1rem;
-  
+
       &:hover {
         filter: brightness(0.7);
       }
@@ -77,14 +77,17 @@ button {
   height: 100%;
 }
 
-.previous-slide, .next-slide {
+.previous-slide,
+.next-slide {
   position: absolute;
   height: 5rem;
   width: 3rem;
   font-size: 2rem;
   color: white;
   background-color: transparent;
-  transition: background-color 1s ease, color 1s ease;
+  transition:
+    background-color 1s ease,
+    color 1s ease;
   border: 0;
   &:hover {
     background-color: rgba(255, 255, 255, 0.705);
@@ -142,4 +145,3 @@ button {
   transition: all 0.5s ease;
   background-color: rgb(82, 187, 129);
 }
-

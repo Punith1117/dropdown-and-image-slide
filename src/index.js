@@ -43,57 +43,57 @@ function getColor(index) {
 
 displayImage(1);
 let slideDisplayedNow = 1;
-let nextSlide = document.querySelector('.next-slide');
-let previousSlide = document.querySelector('.previous-slide');
-let slideNavigators = document.querySelectorAll('.slide-navigator');
+let nextSlide = document.querySelector(".next-slide");
+let previousSlide = document.querySelector(".previous-slide");
+let slideNavigators = document.querySelectorAll(".slide-navigator");
 
 slideNavigators.forEach((slideNavigator, index) => {
-    slideNavigator.addEventListener('click', () => {
-        if (slideNavigator.classList.contains('displaying') == false) {
-            removeSlide();
-            slideDisplayedNow = (index+1);
-            displayImage(slideDisplayedNow);
-        }
-    })
-})
-
-nextSlide.addEventListener('click', () => {
-    let totalSlides = document.querySelectorAll('.image');
-    if (slideDisplayedNow < totalSlides.length) {
-        slideDisplayedNow++;
-        removeSlide();
-        displayImage(slideDisplayedNow);
+  slideNavigator.addEventListener("click", () => {
+    if (slideNavigator.classList.contains("displaying") == false) {
+      removeSlide();
+      slideDisplayedNow = index + 1;
+      displayImage(slideDisplayedNow);
     }
-})
+  });
+});
 
-previousSlide.addEventListener('click', () => {
-    if (slideDisplayedNow != 1) {
-        slideDisplayedNow--;
-        removeSlide();
-        displayImage(slideDisplayedNow);
-    }
-})
+nextSlide.addEventListener("click", () => {
+  let totalSlides = document.querySelectorAll(".image");
+  if (slideDisplayedNow < totalSlides.length) {
+    slideDisplayedNow++;
+    removeSlide();
+    displayImage(slideDisplayedNow);
+  }
+});
+
+previousSlide.addEventListener("click", () => {
+  if (slideDisplayedNow != 1) {
+    slideDisplayedNow--;
+    removeSlide();
+    displayImage(slideDisplayedNow);
+  }
+});
 
 function displayImage(imageNumber) {
-    let imageContainers = document.querySelectorAll(".image");
-    let imageContainer = imageContainers[imageNumber-1];
-    imageContainer.classList.add('displaying-slide');
-    let slideNavigators = document.querySelectorAll('.slide-navigator');
-    let slideNavigator = slideNavigators[imageNumber-1];
-    slideNavigator.classList.add('displaying');
+  let imageContainers = document.querySelectorAll(".image");
+  let imageContainer = imageContainers[imageNumber - 1];
+  imageContainer.classList.add("displaying-slide");
+  let slideNavigators = document.querySelectorAll(".slide-navigator");
+  let slideNavigator = slideNavigators[imageNumber - 1];
+  slideNavigator.classList.add("displaying");
 }
 
 function removeSlide() {
-    let imageContainers = document.querySelectorAll('.image');
-    let slideNavigators = document.querySelectorAll('.slide-navigator');
-    slideNavigators.forEach((slideNavigator) => {
-        if (slideNavigator.classList.contains('displaying')) {
-            slideNavigator.classList.remove('displaying');
-        }
-    })
-    imageContainers.forEach((imageContainer) => {
-        if (imageContainer.classList.contains('displaying-slide')) {
-            imageContainer.classList.remove('displaying-slide');
-        }
-    });
+  let imageContainers = document.querySelectorAll(".image");
+  let slideNavigators = document.querySelectorAll(".slide-navigator");
+  slideNavigators.forEach((slideNavigator) => {
+    if (slideNavigator.classList.contains("displaying")) {
+      slideNavigator.classList.remove("displaying");
+    }
+  });
+  imageContainers.forEach((imageContainer) => {
+    if (imageContainer.classList.contains("displaying-slide")) {
+      imageContainer.classList.remove("displaying-slide");
+    }
+  });
 }
