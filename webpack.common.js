@@ -17,9 +17,6 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     clean: true,
   },
-  // infrastructureLogging: {
-  //   level: 'verbose', // Options: 'none', 'error', 'warn', 'info', 'log', 'verbose'
-  // },
   module: {
     rules: [
       {
