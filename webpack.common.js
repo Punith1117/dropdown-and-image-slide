@@ -17,4 +17,25 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     clean: true,
   },
+  // infrastructureLogging: {
+  //   level: 'verbose', // Options: 'none', 'error', 'warn', 'info', 'log', 'verbose'
+  // },
+  module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
+      },
+
+      {
+        test: /\.html$/i,
+        loader: "html-loader",
+      },
+
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: "asset/resource",
+      },
+    ],
+  },
 };
