@@ -47,6 +47,16 @@ let nextSlide = document.querySelector(".next-slide");
 let previousSlide = document.querySelector(".previous-slide");
 let slideNavigators = document.querySelectorAll(".slide-navigator");
 
+setInterval(function () {
+  removeSlide();
+  if(slideDisplayedNow == 5) {
+    slideDisplayedNow = 1;
+  } else {
+    slideDisplayedNow++;
+  }
+  displayImage(slideDisplayedNow)
+}, 3000);
+
 slideNavigators.forEach((slideNavigator, index) => {
   slideNavigator.addEventListener("click", () => {
     if (slideNavigator.classList.contains("displaying") == false) {
